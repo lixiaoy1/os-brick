@@ -65,6 +65,7 @@ connector_list = [
     'os_brick.initiator.connectors.vrtshyperscale.HyperScaleConnector',
     'os_brick.initiator.connectors.storpool.StorPoolConnector',
     'os_brick.initiator.connectors.nvme.NVMeConnector',
+    'os_brick.initiator.connectors.nic_acclerator.NICAccelerator'
 ]
 
 # Mappings used to determine who to construct in the factory
@@ -116,6 +117,8 @@ _connector_mapping_linux = {
         'os_brick.initiator.connectors.storpool.StorPoolConnector',
     initiator.NVME:
         'os_brick.initiator.connectors.nvme.NVMeConnector',
+    initiator.SMARTNIC:
+        'os_brick.initiator.connectors.nic.NICAccelerator'
 }
 
 # Mapping for the S390X platform
